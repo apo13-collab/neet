@@ -387,6 +387,51 @@ html {
     color: #007bff;            /* 少し色を変えてリンクだと分かりやすく */
 }
 
+/* イラストギャラリー全体の枠 */
+.illust-gallery {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 15px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.illust-gallery h2 {
+    font-size: 16px;
+    margin: 0 0 15px 0;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #666;
+    text-align: left;
+}
+
+/* イラストを並べるグリッド（スマホ3列 / PC 5〜6列程度） */
+.illust-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 8px;
+}
+
+/* 各イラストの枠 */
+.illust-item {
+    aspect-ratio: 1 / 1; /* 正方形に固定 */
+    overflow: hidden;
+    border-radius: 2px;
+    border: 1px solid #eee;
+}
+
+.illust-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 縦長・横長の絵も正方形に収める */
+    display: block;
+    transition: opacity 0.2s;
+}
+
+.illust-item img:hover {
+    opacity: 0.8; /* 重ねた時に少し明るくして、リンク感を出す */
+}
+
 
 
 
