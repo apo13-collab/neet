@@ -24,12 +24,14 @@
 .episode-btn {
   display: inline-block;
   padding: 8px 16px;
-  background-color: #007bff;
-  color: white;
+  background-color: #f0f0f0; /* 背景を薄いグレーに */
+  color: #333333;           /* ★ここを「白」から「濃いグレー（ほぼ黒）」に変更 */
   text-decoration: none;
+  border: 1px solid #ccc;    /* 枠線を付けてボタンらしく */
   border-radius: 5px;
-  margin-top: 10px;
+  cursor: pointer;
 }
+
 .episode-list {
   display: flex;
   flex-wrap: wrap; /* ボタンが増えたら自動で改行 */
@@ -49,3 +51,4 @@
 .episode-btn:hover {
   background-color: #e0e0e0; /* マウスを乗せた時の色 */
 }
+
