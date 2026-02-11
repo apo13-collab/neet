@@ -1,11 +1,11 @@
-/* 作品リストを囲むコンテナ（これを追加） */
+/* 作品リストを囲むコンテナ（ここを修正） */
 .work-grid {
     display: grid;
-    /* 1つのカード幅を最小160px〜最大1frで、画面に合わせて自動で並べる */
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    gap: 20px;       /* カード同士の隙間 */
-    padding: 20px;
-    max-width: 1000px; /* サイト全体の幅に合わせて調整 */
+    /* 最小幅を160pxから「画面の半分(48%)」くらいに広げる設定に変更 */
+    grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));
+    gap: 10px;       /* スマホでは隙間を少し狭く（20px→10px） */
+    padding: 10px;
+    max-width: 1000px;
     margin: 0 auto;
     text-align: left;
 }
@@ -26,13 +26,12 @@
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* サムネイル（カード上部） */
+/* カード内の画像高さも、2列時に合わせて少し調整 */
 .thumbnail {
     width: 100%;
-    height: 220px; /* 高さを揃える */
+    height: 150px;   /* 2列だと横幅が狭くなるので、高さも少し低めに設定 */
     background: #eee;
     border-bottom: 1px solid #ddd;
-    border-right: none; /* 横並び時の線を消す */
 }
 
 .thumbnail img {
@@ -317,5 +316,10 @@ hr {
     flex: 0 0 120px; /* 画像幅を固定 */
     margin: 0;       /* 余計なマージンを削除 */
 }
+@media (max-width: 400px) {
+    .content h3 { font-size: 12px; } /* タイトルをさらに小さく */
+    .episode-btn { font-size: 10px; padding: 3px 0 !important; } /* ボタンをコンパクトに */
+}
+
 
 
