@@ -371,6 +371,22 @@ hr {
     font-weight: bold;
     margin-right: 5px;
 }
+/* ページ全体のスクロールを滑らかにする */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 履歴内のリンクのデザイン調整 */
+.update-text a {
+    text-decoration: none; /* 下線を消す */
+    color: #333;           /* 文字色を周囲に合わせる */
+}
+
+.update-text a:hover {
+    text-decoration: underline; /* マウスを乗せた時だけ下線を出す */
+    color: #007bff;            /* 少し色を変えてリンクだと分かりやすく */
+}
+
 
 
 
