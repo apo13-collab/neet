@@ -25,24 +25,6 @@
     display: block;
 }
 
-/* 説明・ボタンエリア */
-.content {
-    padding: 12px;
-    flex: 1;
-}
-
-.content h3 {
-    margin: 0 0 8px 0;
-    font-size: 18px;
-    border-bottom: 1px dotted #999;
-    padding-bottom: 3px;
-}
-
-.description {
-    font-size: 13px;
-    margin-bottom: 12px;
-    color: #444;
-}
 
 /* ボタンの並び */
 .episode-list {
@@ -255,4 +237,34 @@ hr {
 }
 
 
+
+/* 作品カード内のテキストを左詰めに固定 */
+.content {
+    padding: 10px 15px; /* 上下10px、左右15pxの余白 */
+    flex: 1;
+    text-align: left;   /* 全体を左詰めに */
+}
+
+/* 作品タイトルの調整 */
+.content h3 {
+    margin: 0 0 5px 0;  /* 下の隙間を最小限に */
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+/* 説明文の調整 */
+.description {
+    margin: 0 0 10px 0; /* タイトルとボタンの間の余白 */
+    padding: 0;
+    font-size: 13px;
+    color: #444;
+    line-height: 1.4;
+}
+
+/* サムネイルとテキストの距離をさらに詰めたい場合 */
+.thumbnail {
+    flex: 0 0 120px; /* 画像幅を固定 */
+    margin: 0;       /* 余計なマージンを削除 */
+}
 
