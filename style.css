@@ -1,39 +1,89 @@
-/* --- 新しく追加した作品リストのデザイン --- */
-
-/* 作品カード全体（新都社の枠内に収まるよう最大幅を調整） */
-.work-card {
-    display: flex;
-    background: #ffffff;
-    border: 1px solid #cccccc;
-    margin: 20px auto;
-    max-width: 700px; /* サイドバーがあるため少し狭めに設定 */
-    text-align: left; /* 親のセンター寄せを打ち消し */
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+/* 作品リストを囲むコンテナ（これを追加） */
+.work-grid {
+    display: grid;
+    /* 1つのカード幅を最小160px〜最大1frで、画面に合わせて自動で並べる */
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 20px;       /* カード同士の隙間 */
+    padding: 20px;
+    max-width: 1000px; /* サイト全体の幅に合わせて調整 */
+    margin: 0 auto;
+    text-align: left;
 }
 
-/* サムネイル画像（横幅を固定して歪みを防ぐ） */
+/* 各作品カード（縦型に変更） */
+.work-card {
+    display: flex;
+    flex-direction: column; /* 上下に並べる */
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.work-card:hover {
+    transform: translateY(-3px); /* マウスを乗せると少し浮く演出 */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* サムネイル（カード上部） */
 .thumbnail {
-    flex: 0 0 120px;
-    background: #eeeeee;
-    border-right: 1px solid #cccccc;
+    width: 100%;
+    height: 220px; /* 高さを揃える */
+    background: #eee;
+    border-bottom: 1px solid #ddd;
+    border-right: none; /* 横並び時の線を消す */
 }
 
 .thumbnail img {
-    width: 120px;
-    height: 160px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    display: block;
 }
 
-
-/* ボタンの並び */
-.episode-list {
+/* 説明・ボタンエリア（カード下部） */
+.content {
+    padding: 10px;
     display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
+    flex-direction: column;
+    height: 100%;
 }
 
-/* laymicボタンの修正：文字色を確実に「白」にする */
+.content h3 {
+    font-size: 14px; /* タイトルを少し小さく */
+    margin: 0 0 5px 0;
+    line-height: 1.3;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 11px;
+    color: #666;
+    margin-bottom: 10px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* 説明文を2行で省略して高さを揃える */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* エピソードボタン（カード内に収まるよう調整） */
+.episode-list {
+    margin-top: auto; /* ボタンを常にカードの一番下に配置 */
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2列に並べる */
+    gap: 4px;
+}
+
+.laymic_opener.episode-btn {
+    background-color: #555 !important;
+    color: #fff !important;
+    border: none !important;
+    padding: 4px 2px !important;
+    border-radius: 2px;
+    font-size: 11px;
+    text-align: center;
+    cursor: pointer;
+}
 .laymic_opener.episode-btn {
     background-color: #444444 !important; /* 濃いグレー */
     color: #ffffff !important;           /* 文字を白に固定 */
@@ -267,4 +317,5 @@ hr {
     flex: 0 0 120px; /* 画像幅を固定 */
     margin: 0;       /* 余計なマージンを削除 */
 }
+
 
