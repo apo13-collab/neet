@@ -412,25 +412,32 @@ html {
     gap: 8px;
 }
 
-/* 各イラストの枠 */
+/* イラスト枠のデザイン */
 .illust-item {
-    aspect-ratio: 1 / 1; /* 正方形に固定 */
+    aspect-ratio: 1 / 1;
     overflow: hidden;
-    border-radius: 2px;
-    border: 1px solid #eee;
+    border: 1px solid #ddd;
+    cursor: pointer; /* クリックできることを示す */
 }
 
 .illust-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* 縦長・横長の絵も正方形に収める */
+    object-fit: cover;
     display: block;
-    transition: opacity 0.2s;
 }
+
+/* laymic起動エリアを枠いっぱいに広げる */
+.illust-item .laymic_opener {
+    width: 100%;
+    height: 100%;
+}
+
 
 .illust-item img:hover {
     opacity: 0.8; /* 重ねた時に少し明るくして、リンク感を出す */
 }
+
 
 
 
