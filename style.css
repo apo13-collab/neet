@@ -1,39 +1,97 @@
-/* 親要素をFlexboxにする */
+/* 全体の基本設定 */
+body {
+    background-color: #f4f4f4; /* 背景色をやさしいグレーに */
+    color: #333;
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* ページタイトル */
+h1 {
+    text-align: center;
+    color: #555;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+/* 作品カード（シリーズごとの外枠） */
 .work-card {
-  display: flex;       /* 横並びにする */
-  align-items: center; /* 上下の中央に揃える */
-  gap: 20px;           /* 画像と説明の間の余白 */
-  border: 1px solid #ddd;
-  padding: 15px;
-  border-radius: 10px;
+    display: flex;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 0 auto 20px auto;
+    max-width: 800px; /* 横に広がりすぎないように制限 */
+    overflow: hidden; /* 角丸をはみ出さないように */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-/* 画像のサイズ固定 */
+/* サムネイル画像エリア */
+.thumbnail {
+    flex: 0 0 150px; /* 幅を150pxで固定 */
+    background: #eee;
+}
+
 .thumbnail img {
-  width: 150px;        /* サムネイルの幅 */
-  height: auto;
-  border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 画像の比率を維持して埋める */
+    display: block;
 }
 
-/* 説明欄の調整 */
+/* 説明とボタンのエリア */
 .content {
-  flex: 1;             /* 残りの幅をすべて使う */
+    padding: 15px;
+    flex: 1;
 }
 
-/* ボタンの装飾 */
-.episode-btn {
-  display: inline-block;
-  padding: 8px 16px;
-  background-color: #f0f0f0; /* 背景を薄いグレーに */
-  color: #333333;           /* ★ここを「白」から「濃いグレー（ほぼ黒）」に変更 */
-  text-decoration: none;
-  border: 1px solid #ccc;    /* 枠線を付けてボタンらしく */
-  border-radius: 5px;
-  cursor: pointer;
+.content h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.25rem;
+    color: #000;
 }
 
+.description {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    color: #666;
+}
+
+/* ボタンリスト */
 .episode-list {
-  display: flex;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* laymicボタンの装飾 */
+.laymic_opener.episode-btn {
+    background-color: #666; /* 落ち着いたグレー */
+    color: #fff !important; /* 文字を白に固定 */
+    border: none;
+    padding: 6px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.laymic_opener.episode-btn:hover {
+    background-color: #333; /* マウスを乗せると濃く */
+}
+
+/* スマホ対応（画面が狭いときは縦並び） */
+@media (max-width: 600px) {
+    .work-card {
+        flex-direction: column;
+    }
+    .thumbnail {
+        flex: 0 0 200px;
+    }
+}
   flex-wrap: wrap; /* ボタンが増えたら自動で改行 */
   gap: 10px;       /* ボタン同士の間隔 */
   margin-top: 15px;
@@ -156,4 +214,5 @@ hr {
 	text-decoration: none;
 	margin: 0.5em;
 }
+
 
