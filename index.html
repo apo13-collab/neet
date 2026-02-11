@@ -202,35 +202,41 @@
   </div>
 </div>
 </div> <!-- /work-grid 終了 -->
-	<!-- イラストコーナー -->
+<!-- イラストギャラリー枠 -->
 <div class="illust-gallery">
     <h2>イラストギャラリー</h2>
     <div class="illust-grid">
         
         <!-- イラスト1枚目 -->
         <div class="illust-item">
-            <a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh_U6-28iBrmdlc0spIl9hgEAtggGa5dFI5PmCs7EKvctacvFjf2-irbq2LdI2Cqqw11tnKTy7rm8E3-2ofQC9GyHHfWaj11xmLGQlFERDnRTYf1WTKWHcgZOP3x35oWRKm9sY_b0oGgbHNuNo6HOyierDa2zM7KiPuJt9aoPsCtXJO6mSrkrjSeAlZHBk/s0/1000000197.png">
+            <!-- laymicを起動するボタンとして設定 -->
+            <div class="laymic_opener" data-for="ill1">
                 <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhb-6ocOHogea2POVhSXhEIGhTfDuqJJr7oHqrYcDyJim0-2vbTuyfWvkIDnikCkdR35eBFemKYaNkDCudm8axj-08Ra0P33bJS1lewNxo057STNOqo_kOLoqgxMNnm0UHHF3ubdUiB7N4/s1600/setsubun_mamemaki.png" alt="イラスト1">
-            </a>
+            </div>
         </div>
 
         <!-- イラスト2枚目 -->
         <div class="illust-item">
-            <a href="large-image2.jpg" target="_blank">
-                <img src="thumb-illust2.jpg" alt="イラスト2">
-            </a>
+            <div class="laymic_opener" data-for="ill2">
+                <img src="サムネイルURL" alt="イラスト2">
+            </div>
         </div>
-
-        <!-- 3枚目以降、同じように追加 -->
-        <div class="illust-item"><img src="thumb-illust3.jpg"></div>
-        <div class="illust-item"><img src="thumb-illust4.jpg"></div>
-        <div class="illust-item"><img src="thumb-illust5.jpg"></div>
-        <div class="illust-item"><img src="thumb-illust6.jpg"></div>
 
     </div>
 </div>
 
-<!-- この下にコメントフォームが続きます -->
+<!-- --- laymic用データ（ページ下部、他の作品データの近くに配置） --- -->
+<div class="laymic_template" data-viewer-id="ill1">
+    <img data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhb-6ocOHogea2POVhSXhEIGhTfDuqJJr7oHqrYcDyJim0-2vbTuyfWvkIDnikCkdR35eBFemKYaNkDCudm8axj-08Ra0P33bJS1lewNxo057STNOqo_kOLoqgxMNnm0UHHF3ubdUiB7N4/s1600/setsubun_mamemaki.png">
+</div>
+
+<div class="laymic_template" data-viewer-id="ill2">
+    <img data-src="大きい画像のURL">
+</div>
+
+        
+
+
 
 <!-- --- laymicデータ群（HTMLの末尾にまとめて配置） --- -->
 <div class="laymic_template" data-viewer-id="s1-ep1">
@@ -248,6 +254,7 @@
 <img data-src="s2_02_02.jpg">
 </div>
 
+<!-- この下にコメントフォームが続きます -->
 	<hr>
 
 	<p>作者コメント：○○○○○</p>
