@@ -320,5 +320,40 @@
   })
 </script>
 
+	<div id="imageModal" class="modal" onclick="this.style.display='none'"><img class="modal-content" id="modalImg"></div>
+	<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const modal = document.getElementById('imageModal');
+  const modalImg = document.getElementById('modalImg');
+
+  // 「イラストギャラリー」の文字が含まれるh2要素を探す
+  const headings = document.querySelectorAll('h2');
+  let gallerySection = null;
+  
+  headings.forEach(h2 => {
+    if (h2.textContent.includes('イラストギャラリー')) {
+      gallerySection = h2;
+    }
+  });
+
+  if (gallerySection) {
+    // イラストギャラリーの見出し以降にある画像を探してイベントを設定
+    // nextElementSibling（div class="ext"等）の中のimgを対象にする
+    const images = gallerySection.parentElement.querySelectorAll('img');
+    
+    images.forEach(img => {
+      // 親要素にリンク(a)がない画像、またはギャラリー内の画像のみを対象に設定
+      // サイト全体の画像が対象で良ければ条件なしでOK
+      img.classList.add('gallery-img');
+      img.addEventListener('click', function(e) {
+        // もしaタグで囲まれていてもページ遷移させずにモーダルを出す場合
+        e.preventDefault(); 
+        modal.style.display = "block";
+        modalImg.src = this.src;
+      });
+    });
+  }
+});
+	</script>
 </body>
 </html>
