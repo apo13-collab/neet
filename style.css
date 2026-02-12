@@ -316,7 +316,7 @@ hr {
     flex: 0 0 120px; /* 画像幅を固定 */
     margin: 0;       /* 余計なマージンを削除 */
 }
-@media (max-width: 400px) {
+@media (max-width: 500px) {
     .content h3 { font-size: 12px; } /* タイトルをさらに小さく */
     .episode-btn { font-size: 10px; padding: 3px 0 !important; } /* ボタンをコンパクトに */
 }
@@ -709,6 +709,7 @@ a:visited { color: #ccff00 !important; }
     display: block;
     margin-top: 10px;
 }
+
 
 
 
