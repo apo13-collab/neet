@@ -201,32 +201,26 @@
     </div>
   </div>
 </div>
-</div> <!-- /work-grid 終了 -->
-<!-- イラストギャラリー枠 -->
-<div class="illust-gallery">
+</div> 
+	<!-- /work-grid 終了 -->
+
+	<div class="illust-gallery">
     <h2>イラストギャラリー</h2>
     <div class="illust-grid">
         
         <!-- イラスト1枚目 -->
         <div class="illust-item">
-         <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhb-6ocOHogea2POVhSXhEIGhTfDuqJJr7oHqrYcDyJim0-2vbTuyfWvkIDnikCkdR35eBFemKYaNkDCudm8axj-08Ra0P33bJS1lewNxo057STNOqo_kOLoqgxMNnm0UHHF3ubdUiB7N4/s1600/setsubun_mamemaki.png" alt="イラスト1">
-        </div>
+            <!-- clickイベントでモーダル関数を呼び出す -->
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhl7ocXMzqt4sbrLzO3Y7KIZFZ7yF_lzJB5mjVHMjmQwoiLR80IvzHRWnj0AcyKYnSzXRpyBo_5I7PHYvp69SmCIab0pQDst-m0DhwjL2HSyxPM46kqfUvSTmSAeEcs9P4fNT-oBhZ59Omarf2AUEZX2att3BdzoWAgLZIk-hwH_XF-Vb7dDYfSWGPG0Kbl/s963/eto_uma_banzai.png" alt="作品1" onclick="openModal(this.src)">
         </div>
 
         <!-- イラスト2枚目 -->
         <div class="illust-item">
-        <img src="サムネイルURL" alt="イラスト2">
-         </div>
-        </div>
-        <!-- イラスト3枚目 -->
-        <div class="illust-item">
-         <img src="サムネイルURL" alt="イラスト3">
-         </div>
+            <img src="サムネイルURL" alt="作品2" onclick="openModal(this.src)">
         </div>
 
-		
     </div>
-</div>
+	</div>
 
 
 
@@ -302,40 +296,18 @@
   })
 </script>
 
-	<div id="imageModal" class="modal" onclick="this.style.display='none'"><img class="modal-content" id="modalImg"></div>
-	<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const modal = document.getElementById('imageModal');
-  const modalImg = document.getElementById('modalImg');
+<!-- モーダルウィンドウ本体（</body>の直前に配置） -->
+<div id="myModal" class="modal" onclick="this.style.display='none'">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+</div>
 
-  // 「イラストギャラリー」の文字が含まれるh2要素を探す
-  const headings = document.querySelectorAll('h2');
-  let gallerySection = null;
-  
-  headings.forEach(h2 => {
-    if (h2.textContent.includes('イラストギャラリー')) {
-      gallerySection = h2;
-    }
-  });
-
-  if (gallerySection) {
-    // イラストギャラリーの見出し以降にある画像を探してイベントを設定
-    // nextElementSibling（div class="ext"等）の中のimgを対象にする
-    const images = gallerySection.parentElement.querySelectorAll('img');
-    
-    images.forEach(img => {
-      // 親要素にリンク(a)がない画像、またはギャラリー内の画像のみを対象に設定
-      // サイト全体の画像が対象で良ければ条件なしでOK
-      img.classList.add('gallery-img');
-      img.addEventListener('click', function(e) {
-        // もしaタグで囲まれていてもページ遷移させずにモーダルを出す場合
-        e.preventDefault(); 
-        modal.style.display = "block";
-        modalImg.src = this.src;
-      });
-    });
-  }
-});
-	</script>
+<!-- モーダルを動かすJavaScript（Gemini推奨の簡略版） -->
+<script>
+function openModal(src) {
+    document.getElementById("myModal").style.display = "block";
+    document.getElementById("img01").src = src;
+}
+</script>
 </body>
 </html>
