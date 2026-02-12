@@ -387,7 +387,7 @@ html {
     color: #007bff;            /* 少し色を変えてリンクだと分かりやすく */
 }
 
-/* イラストギャラリー全体の枠 */
+/* --- イラストギャラリー全体の枠 --- */
 .illust-gallery {
     max-width: 700px;
     margin: 30px auto;
@@ -405,65 +405,67 @@ html {
     text-align: left;
 }
 
-/* イラストを並べるグリッド（スマホ3列 / PC 5〜6列程度） */
+/* --- グリッドレイアウトの修整 --- */
 .illust-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-    gap: 8px;
+    /* スマホで3列、PCで6列程度になるよう自動調整 */
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
 }
 
-/* イラスト枠のデザイン */
+/* 各イラストの枠（新しいモーダル用HTML構造に合わせる） */
 .illust-item {
-    aspect-ratio: 1 / 1;
+    width: 100%;
+    aspect-ratio: 1 / 1; /* 正方形を維持 */
     overflow: hidden;
-    border: 1px solid #ddd;
-    cursor: pointer; /* クリックできることを示す */
+    border: 1px solid #eee;
+    cursor: pointer;
+    background: #f9f9f9;
 }
 
+/* 画像を枠いっぱいに表示 */
 .illust-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* 切り抜き表示 */
     display: block;
+    transition: transform 0.2s;
 }
-
-
 
 .illust-item img:hover {
-    opacity: 0.8; /* 重ねた時に少し明るくして、リンク感を出す */
+    transform: scale(1.05); /* 少し大きくしてクリック感を出す */
 }
 
-
-/* モーダル背景（画面全体を覆う層） */
-#imageModal {
-  display: none;
-  position: fixed;
-  z-index: 10000; /* 非常に高い値にして最前面へ */
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background-color: rgba(0,0,0,0.9);
-  cursor: zoom-out;
+/* --- モーダル自体のデザイン（Geminiの指定に合わせる） --- */
+.modal {
+    display: none; /* 初期は非表示 */
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
 }
 
-/* モーダル内の画像 */
-#modalImg {
-  margin: auto;
-  display: block;
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 95%;
-  max-height: 95%;
-  border: 2px solid #fff;
-  box-sizing: border-box; /* 枠線がはみ出さないように */
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-/* ギャラリー内の画像にマウスを乗せた時のカーソル */
-.gallery-img { 
-  cursor: zoom-in; 
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
 }
-
-
-
-
 
