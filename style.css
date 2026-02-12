@@ -582,7 +582,7 @@ body {
 /* --- 3. 作品タイトル：ネオンピンク --- */
 h1 {
     font-size: 40px !important;
-    color: #ff4081 !important;
+    color: #fa8ef7 !important;
     text-shadow: 0 0 10px #ff4081, 0 0 20px #ff4081 !important; /* 発光エフェクト */
     margin-bottom: 40px !important;
 }
@@ -639,3 +639,4 @@ h1 {
 /* リンク色の調整（黒背景で見やすく） */
 a { color: #00e5ff !important; }
 a:visited { color: #ccff00 !important; }
+
