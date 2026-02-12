@@ -495,13 +495,7 @@ html {
     cursor: pointer;
 }
 
-/* 全体の背景：真っ白ではなく、少しだけ色味のある明るい背景に */
-body {
-    background-color: #fcfaff; /* ほんのり紫がかった白 */
-    background-image: radial-gradient(#eee 1px, transparent 1px); /* 小さなドット模様 */
-    background-size: 20px 20px;
-    color: #444;
-}
+
 
 /* 共通：カードの角を丸くして、柔らかい影をつける */
 .work-card, .illust-gallery, .update-info {
@@ -513,19 +507,7 @@ body {
     overflow: hidden;
 }
 
-/* タイトル見出しをポップに */
-h1 {
-    font-size: 28px;
-    color: #ff6b6b; /* ポップな赤ピンク */
-    text-shadow: 2px 2px 0px #eee;
-    margin-bottom: 40px;
-}
 
-h2 {
-    color: #4d96ff; /* 明るい青 */
-    border-bottom: 3px dotted #4d96ff; /* 点線にする */
-    padding-left: 10px;
-}
 
 /* マンガのボタンをカラフルに */
 .laymic_opener.episode-btn {
@@ -552,6 +534,40 @@ h2 {
     background: #fff;
     font-weight: bold;
     color: #666;
+}
+
+/* 1. 背景：ボタンに合う淡いパステルブルーに */
+body {
+    background-color: #f0f7ff; /* 爽やかな薄い水色 */
+    background-image: radial-gradient(#d0e0ff 1px, transparent 1px); /* ドットも青系に */
+    background-size: 24px 24px;
+    color: #334466; /* 文字も真っ黒ではなく濃い紺色に */
+}
+
+/* 2. ページタイトル：ボタンの青色と調和する濃い青に */
+h1 {
+    font-size: 32px;
+    color: #4d7cff; /* ボタンの開始色に近い明るい青 */
+    text-shadow: 2px 2px 4px rgba(77, 124, 255, 0.2);
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+
+/* 3. 各枠の見出し（更新履歴やイラスト）：アクセントの青 */
+h2 {
+    color: #5a88ff;
+    border-bottom: 3px dotted #adc6ff;
+    padding-left: 12px;
+}
+
+/* 4. 更新履歴の「NEW!」タグも青系に合わせる場合 */
+.new-tag {
+    color: #4d7cff;
+    background: #eef2ff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 11px;
 }
 
 
