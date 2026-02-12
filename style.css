@@ -509,19 +509,7 @@ html {
 
 
 
-/* マンガのボタンをカラフルに */
-.laymic_opener.episode-btn {
-    background: linear-gradient(135deg, #6e8efb, #a777e3) !important; /* グラデーション */
-    border-radius: 20px !important; /* 丸いカプセル型 */
-    font-weight: bold;
-    box-shadow: 0 4px 10px rgba(110, 142, 251, 0.3);
-    transition: transform 0.2s, box-shadow 0.2s;
-}
 
-.laymic_opener.episode-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(110, 142, 251, 0.4);
-}
 
 /* イラストギャラリーの枠を可愛く */
 .illust-item {
@@ -536,13 +524,7 @@ html {
     color: #666;
 }
 
-/* 1. 背景：ボタンに合う淡いパステルブルーに */
-body {
-    background-color: #f0f7ff; /* 爽やかな薄い水色 */
-    background-image: radial-gradient(#d0e0ff 1px, transparent 1px); /* ドットも青系に */
-    background-size: 24px 24px;
-    color: #334466; /* 文字も真っ黒ではなく濃い紺色に */
-}
+
 
 /* 2. ページタイトル：ボタンの青色と調和する濃い青に */
 h1 {
@@ -570,26 +552,93 @@ h2 {
     font-size: 11px;
 }
 
-/* 外側のグレーのボックス（#main）を青系に修正 */
-#main {
-    background-color: rgba(255, 255, 255, 0.6) !important; /* 半透明の白にして背景を透かす */
-    border: none !important;            /* 黒い枠線を消す */
-    box-shadow: 0 10px 30px rgba(150, 170, 220, 0.2) !important; /* 柔らかい影 */
-    padding: 20px !important;
-    border-radius: 20px !important;     /* 角をもっと丸く */
-}
 
-/* 下側のコメント欄のボックスも同様に修正 */
-#comment {
-    background-color: rgba(255, 255, 255, 0.8) !important;
-    border: 2px dashed #adc6ff !important; /* 黒枠を「青い点線」に変えてポップに */
-    border-radius: 20px !important;
-    margin-top: 40px !important;
+
+
 }
 
 /* ついでに区切り線（hr）も青系に */
 hr {
     border-bottom: dotted 2px #adc6ff !important;
+}
+
+/* --- 1. 全体の背景：ビビッドなディープブルー --- */
+body {
+    background-color: #1a237e !important; /* 濃い紺色 */
+    background-image: radial-gradient(#3949ab 2px, transparent 2px) !important; /* 明るい青のドット */
+    background-size: 30px 30px !important;
+    color: #ffffff !important; /* 全体の文字は白 */
+    font-weight: bold;
+}
+
+/* --- 2. メインボックス（#main）を目立たせる --- */
+#main {
+    background-color: #ffeb3b !important; /* 鮮やかなイエロー */
+    border: 5px solid #000 !important;   /* 太い黒枠（アメコミ風） */
+    border-radius: 0 !important;         /* あえて角を尖らせてインパクトを出す */
+    padding: 30px !important;
+    box-shadow: 15px 15px 0px #ff4081 !important; /* ピンクの強い影 */
+}
+
+/* --- 3. 作品タイトル --- */
+h1 {
+    font-size: 40px !important;
+    color: #ff4081 !important; /* ビビッドピンク */
+    text-shadow: 4px 4px 0px #000 !important; /* 強い黒い影 */
+    -webkit-text-stroke: 1px #fff; /* 白い縁取り */
+    margin-bottom: 40px !important;
+}
+
+/* --- 4. 作品カード（work-card） --- */
+.work-card {
+    background: #000 !important; /* 黒背景 */
+    border: 3px solid #fff !important;
+    border-radius: 0 !important;
+    color: #fff !important;
+}
+
+.content h3 {
+    color: #00e5ff !important; /* ネオンブルー */
+    border-bottom: 2px solid #00e5ff !important;
+}
+
+/* --- 5. エピソードボタン：ネオンイエロー --- */
+.laymic_opener.episode-btn {
+    background: #ccff00 !important; /* 蛍光イエロー */
+    color: #000 !important;         /* 文字は黒 */
+    border: 2px solid #000 !important;
+    font-weight: 900 !important;
+    box-shadow: 4px 4px 0px #ff4081 !important;
+    transition: 0.1s;
+}
+
+.laymic_opener.episode-btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px #ff4081;
+}
+
+/* --- 6. イラストギャラリー --- */
+.illust-gallery {
+    background: #000 !important;
+    border: 4px solid #ff4081 !important;
+    border-radius: 0 !important;
+}
+
+.illust-item {
+    border: 3px solid #fff !important;
+    box-shadow: 5px 5px 0px #00e5ff !important;
+}
+
+.illust-caption {
+    background: #000 !important;
+    color: #fff !important;
+}
+
+/* --- 7. コメント欄 --- */
+#comment {
+    background-color: #ff4081 !important; /* ビビッドピンク */
+    border: 5px solid #000 !important;
+    color: #fff !important;
 }
 
 
