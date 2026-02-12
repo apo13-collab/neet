@@ -562,83 +562,80 @@ hr {
     border-bottom: dotted 2px #adc6ff !important;
 }
 
-/* --- 1. 全体の背景：ビビッドなディープブルー --- */
+/* --- 1. 全体の背景：深い紺から「黒」へ --- */
 body {
-    background-color: #1a237e !important; /* 濃い紺色 */
-    background-image: radial-gradient(#3949ab 2px, transparent 2px) !important; /* 明るい青のドット */
+    background-color: #050505 !important; /* ほぼ真っ黒 */
+    background-image: radial-gradient(#1a1a1a 2px, transparent 2px) !important; 
     background-size: 30px 30px !important;
-    color: #ffffff !important; /* 全体の文字は白 */
-    font-weight: bold;
+    color: #ffffff !important;
 }
 
-/* --- 2. メインボックス（#main）を目立たせる --- */
+/* --- 2. メインボックス（#main）：ここを黄色から黒へ --- */
 #main {
-    background-color: #ffeb3b !important; /* 鮮やかなイエロー */
-    border: 5px solid #000 !important;   /* 太い黒枠（アメコミ風） */
-    border-radius: 0 !important;         /* あえて角を尖らせてインパクトを出す */
+    background-color: #111111 !important; /* 漆黒に近いグレー */
+    border: 3px solid #ff4081 !important;   /* 枠線をピンクにして輪郭を出す */
+    border-radius: 0 !important;
     padding: 30px !important;
-    box-shadow: 15px 15px 0px #ff4081 !important; /* ピンクの強い影 */
+    box-shadow: 0 0 20px rgba(255, 64, 129, 0.3) !important; /* ほんのり光るエフェクト */
 }
 
-/* --- 3. 作品タイトル --- */
+/* --- 3. 作品タイトル：ネオンピンク --- */
 h1 {
     font-size: 40px !important;
-    color: #ff4081 !important; /* ビビッドピンク */
-    text-shadow: 4px 4px 0px #000 !important; /* 強い黒い影 */
-    -webkit-text-stroke: 1px #fff; /* 白い縁取り */
+    color: #ff4081 !important;
+    text-shadow: 0 0 10px #ff4081, 0 0 20px #ff4081 !important; /* 発光エフェクト */
     margin-bottom: 40px !important;
 }
 
 /* --- 4. 作品カード（work-card） --- */
 .work-card {
-    background: #000 !important; /* 黒背景 */
-    border: 3px solid #fff !important;
+    background: #1a1a1a !important; 
+    border: 2px solid #00e5ff !important; /* 枠線をネオンブルーに */
     border-radius: 0 !important;
-    color: #fff !important;
 }
 
 .content h3 {
-    color: #00e5ff !important; /* ネオンブルー */
-    border-bottom: 2px solid #00e5ff !important;
+    color: #ffeb3b !important; /* タイトルに黄色を使い、視認性を確保 */
+    border-bottom: 2px solid #ffeb3b !important;
 }
 
-/* --- 5. エピソードボタン：ネオンイエロー --- */
+/* --- 5. エピソードボタン：蛍光グリーン --- */
 .laymic_opener.episode-btn {
-    background: #ccff00 !important; /* 蛍光イエロー */
-    color: #000 !important;         /* 文字は黒 */
-    border: 2px solid #000 !important;
+    background: #ccff00 !important; /* 蛍光イエローグリーン */
+    color: #000 !important;
+    border: none !important;
     font-weight: 900 !important;
-    box-shadow: 4px 4px 0px #ff4081 !important;
+    box-shadow: 4px 4px 0px #00e5ff !important; /* 青い影 */
     transition: 0.1s;
 }
 
 .laymic_opener.episode-btn:hover {
-    transform: translate(-2px, -2px);
-    box-shadow: 6px 6px 0px #ff4081;
+    background: #ffffff !important;
+    box-shadow: 2px 2px 0px #00e5ff;
 }
 
 /* --- 6. イラストギャラリー --- */
 .illust-gallery {
-    background: #000 !important;
-    border: 4px solid #ff4081 !important;
+    background: #111111 !important;
+    border: 3px solid #00e5ff !important;
     border-radius: 0 !important;
 }
 
 .illust-item {
-    border: 3px solid #fff !important;
-    box-shadow: 5px 5px 0px #00e5ff !important;
+    border: 2px solid #333 !important;
 }
 
-.illust-caption {
-    background: #000 !important;
-    color: #fff !important;
+.illust-item:hover {
+    border-color: #ff4081 !important; /* ホバーでピンクに光る */
 }
 
 /* --- 7. コメント欄 --- */
 #comment {
-    background-color: #ff4081 !important; /* ビビッドピンク */
-    border: 5px solid #000 !important;
+    background-color: #111111 !important;
+    border: 3px solid #ff4081 !important;
     color: #fff !important;
 }
 
-
+/* リンク色の調整（黒背景で見やすく） */
+a { color: #00e5ff !important; }
+a:visited { color: #ccff00 !important; }
