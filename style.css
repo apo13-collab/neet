@@ -582,8 +582,8 @@ body {
 /* --- 3. 作品タイトル：ネオンピンク --- */
 h1 {
     font-size: 40px !important;
-    color: #eb9f6b !important;
-    text-shadow: 0 0 10px #ff4081, 0 0 20px #ff4081 !important; /* 発光エフェクト */
+    color: #eaf0a8 !important;
+    text-shadow: 0 0 10px #eaf0a8, 0 0 20px #eaf0a8 !important; /* 発光エフェクト */
     margin-bottom: 40px !important;
 }
 
@@ -640,4 +640,47 @@ h1 {
 a { color: #00e5ff !important; }
 a:visited { color: #ccff00 !important; }
 
+
+/* 更新履歴の各行 */
+.update-item {
+    padding: 8px 0;
+    border-bottom: 1px dotted #333; /* 区切り線は控えめに */
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+/* 日付：少し落ち着いたグレーにして情報の優先度を下げる */
+.update-date {
+    color: #888 !important;
+    font-size: 12px;
+    flex: 0 0 85px;
+}
+
+/* ★更新内容の文字：見やすい「ネオンブルー」または「白」に変更 */
+.update-text {
+    flex: 1;
+    color: #00e5ff !important; /* 明るい水色。白に近い方が良ければ #ffffff に変更 */
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* リンクになっている場合の色も統一 */
+.update-text a {
+    color: #00e5ff !important;
+    text-decoration: none;
+}
+
+.update-text a:hover {
+    text-decoration: underline;
+    color: #ffffff !important; /* ホバーで白く光る */
+}
+
+/* NEW!タグ：ここは目立つようにネオンピンクを維持 */
+.new-tag {
+    color: #ff4081 !important;
+    font-weight: 900;
+    margin-right: 5px;
+    text-shadow: 0 0 5px #ff4081;
+}
 
