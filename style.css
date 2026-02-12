@@ -495,4 +495,63 @@ html {
     cursor: pointer;
 }
 
+/* 全体の背景：真っ白ではなく、少しだけ色味のある明るい背景に */
+body {
+    background-color: #fcfaff; /* ほんのり紫がかった白 */
+    background-image: radial-gradient(#eee 1px, transparent 1px); /* 小さなドット模様 */
+    background-size: 20px 20px;
+    color: #444;
+}
+
+/* 共通：カードの角を丸くして、柔らかい影をつける */
+.work-card, .illust-gallery, .update-info {
+    background: #ffffff;
+    border: none; /* 枠線を消す */
+    border-radius: 15px; /* 角をしっかり丸める */
+    box-shadow: 0 10px 25px rgba(150, 150, 180, 0.15); /* 柔らかい影 */
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+/* タイトル見出しをポップに */
+h1 {
+    font-size: 28px;
+    color: #ff6b6b; /* ポップな赤ピンク */
+    text-shadow: 2px 2px 0px #eee;
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: #4d96ff; /* 明るい青 */
+    border-bottom: 3px dotted #4d96ff; /* 点線にする */
+    padding-left: 10px;
+}
+
+/* マンガのボタンをカラフルに */
+.laymic_opener.episode-btn {
+    background: linear-gradient(135deg, #6e8efb, #a777e3) !important; /* グラデーション */
+    border-radius: 20px !important; /* 丸いカプセル型 */
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(110, 142, 251, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.laymic_opener.episode-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(110, 142, 251, 0.4);
+}
+
+/* イラストギャラリーの枠を可愛く */
+.illust-item {
+    border-radius: 10px;
+    border: 3px solid #fff; /* 白い縁取りをつける */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.illust-caption {
+    background: #fff;
+    font-weight: bold;
+    color: #666;
+}
+
 
