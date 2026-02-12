@@ -413,14 +413,15 @@ html {
     gap: 10px;
 }
 
-/* 各イラストの枠（新しいモーダル用HTML構造に合わせる） */
+/* 各イラストの枠（高さを自動にして文字を収める） */
 .illust-item {
     width: 100%;
-    aspect-ratio: 1 / 1; /* 正方形を維持 */
+    /* aspect-ratioは削除または画像部分のみに適用します */
     overflow: hidden;
     border: 1px solid #eee;
-    cursor: pointer;
-    background: #f9f9f9;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
 }
 
 /* 画像を枠いっぱいに表示 */
@@ -436,6 +437,31 @@ html {
     transform: scale(1.05); /* 少し大きくしてクリック感を出す */
 }
 
+/* 画像部分だけを正方形に保つ */
+.illust-thumb {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.illust-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* キャプション（一言）のスタイル */
+.illust-caption {
+    padding: 5px;
+    font-size: 11px;    /* 小さめで控えめに */
+    color: #444;
+    text-align: center; /* 中央寄せ */
+    line-height: 1.2;
+    background: #fff;
+    word-break: break-all; /* 長い単語でも改行する */
+}
 /* --- モーダル自体のデザイン（Geminiの指定に合わせる） --- */
 .modal {
     display: none; /* 初期は非表示 */
@@ -468,4 +494,5 @@ html {
     font-weight: bold;
     cursor: pointer;
 }
+
 
