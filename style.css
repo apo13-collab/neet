@@ -660,20 +660,20 @@ a:visited { color: #ccff00 !important; }
 /* ★更新内容の文字：見やすい「ネオンブルー」または「白」に変更 */
 .update-text {
     flex: 1;
-    color: #00e5ff !important; /* 明るい水色。白に近い方が良ければ #ffffff に変更 */
+    color: #00b7ff !important; /* 明るい水色。白に近い方が良ければ #ffffff に変更 */
     font-size: 14px;
     line-height: 1.4;
 }
 
 /* リンクになっている場合の色も統一 */
 .update-text a {
-    color: #00e5ff !important;
+    color: #00b7ff !important;
     text-decoration: none;
 }
 
 .update-text a:hover {
     text-decoration: underline;
-    color: #ffffff !important; /* ホバーで白く光る */
+    color: #a9cad7 !important; /* ホバーで白く光る */
 }
 
 /* NEW!タグ：ここは目立つようにネオンピンクを維持 */
@@ -709,5 +709,6 @@ a:visited { color: #ccff00 !important; }
     display: block;
     margin-top: 10px;
 }
+
 
 
