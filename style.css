@@ -710,6 +710,30 @@ a:visited { color: #ccff00 !important; }
     margin-top: 10px;
 }
 
+/* 1. 土台となる #main の左右の余白を削る（スマホ時） */
+@media (max-width: 600px) {
+    #main {
+        padding: 15px 5px !important; /* 左右の余白を 20px → 5px に減らす */
+    }
+}
+
+/* 2. 作品グリッドの最小幅を「画面の半分」に最適化 */
+.work-grid {
+    display: grid;
+    /* スマホで2列を維持しつつ、隙間を詰めて横幅を稼ぐ */
+    grid-template-columns: repeat(auto-fill, minmax(46%, 1fr));
+    gap: 8px; /* カード同士の隙間を少し狭く */
+    padding: 5px; /* 外側の余白を最小限に */
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* 3. カード内の余白も少し詰めて、画像と文字の面積を増やす */
+.content {
+    padding: 8px !important; /* 内側の余白を少し削る */
+}
+
 
 
 
