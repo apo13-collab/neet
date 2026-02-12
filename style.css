@@ -683,4 +683,31 @@ a:visited { color: #ccff00 !important; }
     margin-right: 5px;
     text-shadow: 0 0 5px #ff4081;
 }
+/* ページ説明文のスタイル */
+.site-intro {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.05); /* ほんのり白を混ぜた透明背景 */
+    border: 1px solid #00e5ff;             /* ネオンブルーの細い枠 */
+    border-radius: 0;                      /* デザインに合わせて角は尖らせる */
+    text-align: left;                      /* 説明文は左詰めが見やすい */
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.2); /* ほのかな発光 */
+}
+
+.site-intro p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #ffffff;
+}
+
+/* 注意書きなどの強調用 */
+.site-intro span {
+    color: #ffeb3b; /* 警告や重要事項はイエローで目立たせる */
+    font-size: 12px;
+    display: block;
+    margin-top: 10px;
+}
+
 
