@@ -1238,7 +1238,18 @@ a:visited { color: #ccff00 !important; }
 	
 
 <!-- laymic.js v2.2.2 - github.com/dettalant/laymic -->
-<script src="https://cdn.jsdelivr.net/npm/@dettalant/laymic@2.2.2/dist/laymic.iife.min.js" defer></script>
+	    <script>
+        // ページ全体の表示（load）が完了してから処理を開始
+        window.addEventListener('load', function() {
+            // さらに1秒（1000ミリ秒）待機してからスクリプトを読み込む
+            setTimeout(function() {
+                var script = document.createElement('script');
+                script.src = "https://cdn.jsdelivr.net/npm/@dettalant/laymic@2.2.2/dist/laymic.iife.min.js";
+                // 読み込み完了後にlaymicを初期化する（必要な場合）
+                document.body.appendChild(script);
+            }, 1000);
+        });
+		 </script>
 <script>
   new laymic.LaymicApplicator(".laymic_template", {
     // 原稿画像横幅
