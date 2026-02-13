@@ -764,15 +764,17 @@ a:visited { color: #ccff00 !important; }
     line-height: 1.5;
 }
 
-/* laymicビューワーを最前面に表示させる設定 */
-.laymic_container {
-    z-index: 10000 !important; /* 新都社のどの要素よりも大きな数値を指定 */
+/* laymicビューワーを宇宙の果てまで手前に持ってくる */
+#laymic {
+    z-index: 2147483647 !important; /* 32ビット整数の最大値（これ以上は設定不可） */
+    position: fixed !important;
 }
 
-/* もし背景の黒い幕（オーバーレイ）も被る場合はこれも追加 */
+/* 背景の黒い幕も確実にサイドバーの上に重ねる */
 .laymic_overlay {
-    z-index: 9999 !important;
+    z-index: 2147483646 !important;
 }
+
 
 
 
