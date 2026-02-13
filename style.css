@@ -775,6 +775,11 @@ a:visited { color: #ccff00 !important; }
     z-index: 2147483646 !important;
 }
 
+/* 縦読み時の画像同士の隙間を調整 */
+.laymic_template.vertical img {
+    margin-bottom: 10px; /* 好きな隙間の広さに調整 */
+}
+
 
 
 
