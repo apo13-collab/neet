@@ -780,6 +780,14 @@ a:visited { color: #ccff00 !important; }
     margin-bottom: 10px; /* 好きな隙間の広さに調整 */
 }
 
+/* 縦読み時の画像が画面幅にフィットするように調整 */
+.laymic_v img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 10px auto; /* 画像の下に少し隙間を作る */
+}
+
 
 
 
