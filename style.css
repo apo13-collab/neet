@@ -734,6 +734,36 @@ a:visited { color: #ccff00 !important; }
     padding: 8px !important; /* 内側の余白を少し削る */
 }
 
+/* つぶやき欄のスタイル */
+.mini-tweet {
+    max-width: 700px;
+    margin: 0 auto 20px auto; /* 下に少し余白 */
+    padding: 12px 18px;
+    background: #111;
+    border-left: 5px solid #ccff00; /* 蛍光イエローのアクセントライン */
+    border-right: 1px solid #333;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    text-align: left;
+}
+
+/* 「つぶやき」というラベル */
+.tweet-label {
+    font-size: 10px;
+    color: #ccff00;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+/* つぶやき本文 */
+.tweet-text {
+    margin: 0;
+    font-size: 13px;
+    color: #eee;
+    line-height: 1.5;
+}
+
 
 
 
